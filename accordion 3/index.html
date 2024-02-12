@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>accordion</title>
+    <style>
+        .accordion-colam {
+            margin: 50px 500px 50px 200px;
+            border: 2px solid gray;
+            padding: 60px 58px;
+        }
+        
+        .content p {
+            padding: 16px 0px;
+            font-size: 18px;
+        }
+        
+        .button {
+            border-bottom: 1px solid gray;
+            font-size: 16px;
+            position: relative;
+        }
+        
+        .button::after {
+            position: absolute;
+            content: "";
+            top: 21px;
+            right: 0;
+            background: url(images/arrow-com.svg) no-repeat;
+            width: 15px;
+            height: 15px;
+            background-size: 12px;
+        }
+        
+        .content.active .button::after {
+            transform: rotate(90deg);
+        }
+        
+        .content-text {
+            display: none;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".content").click(function() {
+                $(this).next().slideToggle();
+                $(this).toggleClass("active");
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="accordion-colam">
+        <div class="layout">
+            <div class="title">
+                <h2>Allergies and Intolerances</h2>
+            </div>
+            <div class="content">
+                <p class="button">Do you have an allergy or intolerance?</p>
+            </div>
+            <div class="content-text">
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+            </div>
+            <div class="title">
+                <h2>Brewser Subscription</h2>
+            </div>
+            <div class="content">
+                <p class="button">What is Brewser?</p>
+            </div>
+            <div class="content-text">
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+            </div>
+
+            <div class="content">
+                <p class="button">How much does it cost?</p>
+            </div>
+            <div class="content-text">
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+
+            </div>
+            <div class="content">
+                <p class="button">How many beers will I get in my box?
+                </p>
+            </div>
+            <div class="content-text">
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+            </div>
+            <div class="content">
+                <p class="button">How often do I get a delivery?
+                </p>
+            </div>
+            <div class="content-text">
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+            </div>
+            <div class="content">
+                <p class="button">How many boxes can I order each month?</p>
+                <div class="content-text"></div>
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+            </div>
+            <div class="content">
+                <p class="button">When will I be billed?</p>
+            </div>
+            <div class="content-text">
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+            </div>
+            <div class="content">
+                <p class="button">Can I edit my orders?
+                </p>
+            </div>
+            <div class="content-text">
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+            </div>
+            <div class="content">
+                <p class="button">How to choose only one style?</p>
+            </div>
+            <div class="content-text">
+                <p>As each of our boxes differs month to month and are curated by the brewery – we cannot guarantee products do not contain certain allergens. If you have any allergies, intolerances or dietary requirements and are unsure of any offerings
+                    on Brewser, please check the website of your chosen brewery or reach out to via customer support.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

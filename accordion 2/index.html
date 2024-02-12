@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>accordion ex.2</title>
+    <style>
+        .list h3 {
+            background: none;
+            background-color: #936E4D;
+            color: #FFF;
+            padding: 0px 0px 5px 20px;
+            margin-left: 100px;
+            margin-right: 300px;
+            padding: 20px;
+            margin-bottom: 0;
+            padding-left: 60px;
+        }
+        
+        .contant {
+            display: none;
+            margin-left: 100px;
+            padding: 0px 0px 5px 20px;
+            font-size: 20px;
+            margin-right: 300px;
+            background-color: cadetblue;
+        }
+        
+        .header {
+            position: relative;
+        }
+        
+        .header::after {
+            position: absolute;
+            content: "";
+            top: 14px;
+            left: 118px;
+            background: url(images/triangle-right-svgrepo-com.svg) no-repeat center center;
+            max-width: 100%;
+            width: 40px;
+            height: 40px;
+            background-size: 30px;
+        }
+        
+        .header.active::after {
+            transform: rotate(90deg);
+        }
+        
+        .contant p {
+            margin: 0;
+            padding: 20px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".header").click(function() {
+                $(".header").removeClass("active");
+                $(this).addClass("active")
+                $(".contant").slideUp("slow");
+                $(this).next().slideDown("slow");
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div class="list">
+        <div class="header">
+            <h3>first</h3>
+        </div>
+        <div class="contant">
+            <p>"The content of the first link"</p>
+        </div>
+        <div class="header">
+            <h3>Second</h3>
+        </div>
+        <div class="contant">
+            <p>"The content of the Second link"</p>
+        </div>
+        <div class="header">
+            <h3>Third</h3>
+        </div>
+        <div class="contant">
+            <p>"The content of the third link"</p>
+        </div>
+
+
+</body>
+
+</html>
